@@ -1,0 +1,62 @@
+{
+  "name": "@tonycletus/pwa-install-prompt",
+  "version": "0.1.0",
+  "description": "React hook and button for PWA install prompt detection.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Tony Cletus",
+  "homepage": "https://github.com/tonycletus/pwa-install-prompt#readme",
+  "bugs": {
+    "url": "https://github.com/tonycletus/pwa-install-prompt/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tonycletus/pwa-install-prompt.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "pwa",
+    "install",
+    "react",
+    "beforeinstallprompt",
+    "ios",
+    "android"
+  ],
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --clean --external react",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "lint": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@10.17.0",
+  "devDependencies": {
+    "@types/node": "^22.16.5",
+    "@types/react": "^18.3.23",
+    "react": "^18.3.1",
+    "tsup": "^8.3.6",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  }
+}
